@@ -36,6 +36,7 @@ La pipeline est déclenchée automatiquement **à chaque push sur la branche `ma
    - Vérification avec : `curl http://localhost:3000/health`  
    - Déploiement idempotent : relancer la pipeline ne crée pas de doublons.
 
+![github actions](screenshot/Github.png)
 ---
 
 ## Accès à l'application
@@ -58,4 +59,16 @@ La pipeline est déclenchée automatiquement **à chaque push sur la branche `ma
 1. Cloner le dépôt :  
    ```bash
    git clone <URL_DU_DEPOT>
-   cd TP_deploiement
+   cd TP_deploiement 
+
+# Installer dépendances Node.js
+npm install
+
+# Lancer l'application localement
+npm start
+
+# Ou via Docker
+```bash
+docker build -t myapp:local .
+docker run -d -p 3000:3000 myapp:local
+curl http://localhost:3000/health
