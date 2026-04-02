@@ -44,6 +44,8 @@ La pipeline est déclenchée automatiquement **à chaque push sur la branche `ma
 - **Port exposé** : `3000`  
 - Endpoint de vérification : [http://20.199.65.166:3000/health](http://20.199.65.166:3000/health)
 
+![IP public](screenshot/IP_public.png)
+
 ---
 
 ## GitHub Secrets utilisés
