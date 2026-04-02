@@ -67,4 +67,6 @@ jobs:
             sudo docker stop myapp || true
             sudo docker rm myapp || true
             sudo docker run -d --name myapp -p 3000:3000 maximedesclaux/myapp:latest
-            curl http://localhost:3000/health
+            echo "Waiting 5s for container to start..."
+            sleep 5
+            curl --retry 5 --retry-delay 3 http://localhost:3000/health
